@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>KrovvoNC</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'home_page/styles.css'%}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="http://localhost:8000/">Krovvo Natural Cosmetic</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="http://localhost:8000/">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about/">Sobre Nosotros</a></li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="http://localhost:8000/accounts/profile/">Perfil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/logout">Cerrar sesión</a></li>
+                        {% else %}    
+                            <li class="nav-item"><a class="nav-link" href="/login/">Iniciar Sesión</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header - set the background image for the header in the line below-->
+        <header class="py-5 bg-image-full" style="background-image: url('https://i.imgur.com/fFlORlu.jpg')">
+            <div class="text-center my-5">
+                <img class="img-fluid rounded-circle mb-4" src="https://i.imgur.com/CO07dEb.jpg" alt="..." />
+                <!--<h1 class="text-white fs-3 fw-bolder">Python, CSS, HTML</h1>-->
+                <!--<p class="text-white">Con nuestros cursos puedes aprender Python de forma sencilla.</p>-->
+            </div>
+        </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Image element - set the background image for the header in the line below-->
+        <div class="py-5 bg-image-full" style="background-image: url('https://i.imgur.com/BRHykia.jpg')">
+            <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+            <div style="height: 20rem"></div>
+        </div>
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>Krovvo Natural Hairloss Prevention</h2>
+                        <p class="lead">Misma calidad, mejor precio.</p>
+                        <p class="mb-0">Nuestro producto totalmente natural para ayudar contra la pérdida del cabello, no solo ofrece alta calidad, sino que también un precio mucho mejor que el de sus competidores, y si esto fuera poco, nuestro producto es completamente natural, por lo que es muchísimo más saludable para ti.</p>
+                        <br>
+                        <center><h2>Resultados</h2></center>
+                        <div id="custom-menu">
+                            <ul class="one">
+                                <li><strong>Antes</strong></li>
+                                <li><strong>Después</strong></li>
+                            </ul>
+                        </div>
+                        <div class="images">
+                            <ul class="two">
+                                <li><img class="img-fluid" src="https://i.imgur.com/gcCYNzi.jpg" width="300" height="300" alt="..." /></li>
+                                <li><img class="img-fluid" src="https://i.imgur.com/gOPZwi2.jpg" width="300" height="300" alt="..." /></li>
+                            <ul>
+                        </div> 
+                        <br>
+                        <center><h2>Precios</h2></center>
+                        <br>
+                        <center><h2>RD$450</h2></center>
+                        <br>
+                        <center><p class="lead"><strong>Opening Day Sale - RD$300</strong></p></center>
+                        <center><p class="text-muted">Solamente por hoy</p></center>
+                        <br>
+                        <center><img class="img-fluid" src="https://i.imgur.com/q3QMgrC.jpg" width="300" height="300" alt="..." /></center>
+                        <br>
+                        <center><p class="mb-0">Este increíble producto puede ser tuyo por tan solo <strong>RD$450</strong></p></center>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Image element - set the background image for the header in the line below-->
+        <div class="py-5 bg-image-full" style="background-image: url('https://www.oseudinheirovalemais.com.br/wp-content/uploads/2015/08/Fuja-das-tenta%C3%A7%C3%B5es-a-internet-pode-te-influenciar-a-gastar-mais1.jpg')">
+            <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+            <div style="height: 20rem"></div>
+        </div>
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2><center>¿Dónde puedes conseguir nuestro producto?</center></h2>
+                        <p class="lead"><center>Puedes comprarlo de forma online, recibir tu producto mediante un envío, o puedes ir en persona a tu centro de belleza de preferencia y comprarlo ahí.</center></p>
+                        <br>
+                        <center><button onclick="location.href='#'" type="button">
+                        <center>Comprar online</center></button></center> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Krovvo Natural Cosmetic, 2021</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src='js/scripts.js'></script>
+    </body>
+</html>

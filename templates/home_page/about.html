@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>KrovoNC</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'home_page/styles.css'%}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="http://localhost:8000/about/">Krovo Natural Cosmetic</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="http://localhost:8000/">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/about/">Sobre Nosotros</a></li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="http://localhost:8000/accounts/profile/">Perfil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/logout">Cerrar sesión</a></li>
+                        {% else %}    
+                            <li class="nav-item"><a class="nav-link" href="/login/">Iniciar Sesión</a></li>
+                        {% endif %}                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header - set the background image for the header in the line below-->
+        <header class="py-5 bg-image-full" style="background-image: url('https://i.imgur.com/fFlORlu.jpg')">
+            <div class="text-center my-5">
+                <img class="img-fluid rounded-circle mb-4" src="https://i.imgur.com/CO07dEb.jpg" alt="..." />
+                <!--<h1 class="text-white fs-3 fw-bolder">Python, CSS, HTML</h1>-->
+                <!--<p class="text-white">Con nuestros cursos puedes aprender Python de forma sencilla.</p>-->
+            </div>
+        </header>
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>¿Quiénes somos?</h2>
+                        <p class="lead">Nuestro equipo de trabajo.</p>
+                        <br>
+                        <div id="custom-menu">
+                            <ul class="one">
+                                <li>Winston Pichardo</li>
+                                <li>Víctor Mencía</li>
+                                <li>Miguel Martínez</li>
+                            </ul>
+                        </div>
+                        <div class="images">
+                            <ul class="two">
+                                <li><img class="img-fluid" src="https://i.imgur.com/zp5GIpV.jpg" alt="..." style="padding:12px;" width="900" height="900"/></li>
+                                <li><img class="img-fluid" src="https://i.imgur.com/jCp638j.jpg" alt="..." style="padding:12px;"width="900" height="900"/></li>
+                                <li><img class="img-fluid" src="https://i.imgur.com/wQZY6LU.jpg" alt="..." style="padding:12px;"width="900" height="900"/></li>
+                            </ul>
+                        </div>
+                        <div id="custom-menu">
+                            <ul class="one">
+                                <li>Gonzalo Ruiz-Diaz</li>
+                                <li>Rodolfo Pichardo</li>
+                            </ul>
+                        </div>
+                        <div class="images">
+                            <ul class="two">
+                                <li><img class="img-fluid" src="https://i.imgur.com/qYWtDvS.jpg" alt="..." style="padding:12px;" width="1000" height="1000"/></li>
+                                <li><img class="img-fluid" src="https://i.imgur.com/eMSOr1s.jpg" alt="..." style="padding:12px;" width="900" height="900"/></li>
+                            </ul>
+                        </div>
+                        <!--<img class="img-fluid" src="" alt="..." />-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Image element - set the background image for the header in the line below-->
+        <div class="py-5 bg-image-full" style="background-image: url('https://www.teahub.io/photos/full/48-484273_photo-wallpaper-the-sky-clouds-macro-goal-blur.jpg')">
+            <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+            <div style="height: 20rem"></div>
+        </div>
+        <section>
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>Objetivos e información</h2>
+                        <p class="lead">Nuestra misión es nuestra visión.</p>
+                        <br>
+                        <p class="mb-0">Krovvo Natural Cosmetic es una empresa de cosméticos enfocada en productos para prevenir o detener la caída del pelo en todo tipo de personas que sienta la necesidad, o que diréctamente necesite de nuestro producto ya sea con el objetivo de prevenir la caída del cabello o para detenerla. Cada integrante de nuestro equipo es bueno en diferentes aspectos, haciendo que tengamos un equilibrio, por ejemplo: responsables, negociantes, determinados, dispuestos a cumplir metas, mente abierta y tenemos organización.</p>
+                        <br>
+                        <p class="mb-0">Buscamos ser una compañia totalmente transparente, con el objetivo de ayudar a las personas de manera eficaz, eficiente y accesible para todo tipo de personas que se encuentren en necesidad de nuestro producto, utilizando materiales no contaminantes o dañinos para el cuero cabelludo para cumplir nuestra misión. También nos sentimos con la necesidad de que nuestros clientes y colaboradores se sientas seguros al hacer negocios con nosotros, nos preocupados gravemente por el bienestar de nuestros clientes, por eso buscamos acomodarnos a sus necesidades. Y por último somos una compañía que se preocupa por el medio ambiente, y hacemos nuestra parte evitando el uso de materiales químicos.</p>
+                        <br>
+                        <p class="mb-0">Nuestros productos están hechos utilizando materiales 100% naturales, evitando siempre el uso de químicos que puedan poner en riesgo no solo la salud del cabello pero el bienestar del cuerpo en general.</p>
+                        <!--<img class="img-fluid" src="" alt="..." />-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Image element - set the background image for the header in the line below-->
+        <div class="py-5 bg-image-full" style="background-image: url('https://i.imgur.com/F7IDOy3.jpg')">
+            <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+            <div style="height: 20rem"></div>
+        </div>
+        <section>
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>Información de contacto.</h2>
+                        <p class="lead">Contáctanos usando tu método preferido...</p>
+                        <br>
+                        <p class="mb-0">Estamos a tu disposición para cualquier tipo de pregunta o inquietud que tengas.</p>
+                        <br>
+                        <ul>
+                            <li>Teléfono: <strong>+1 849-918-0607</strong></li>
+                            <br>
+                            <li>Email: <strong>krovvonc@gmail.com</strong></li>
+                            <br>
+                        </ul>
+                        <!--<img class="img-fluid" src="" alt="..." />-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Krovvo Natural Cosmetic, 2021</p></div>
+        </footer>
+    </body>
+</html>

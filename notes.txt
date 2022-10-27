@@ -1,0 +1,2 @@
+the site's pretty much done for now. If in the future we wanted to actually implement
+the online payment option then I'd only need to add a form for it and make it an encrypted form.
